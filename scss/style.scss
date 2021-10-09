@@ -124,7 +124,7 @@
       font-size: 40px;
       text-align: center;
     }
-    @include mobile-3{
+    @include mobile-3 {
       font-size: 30px;
     }
   }
@@ -156,9 +156,9 @@
         border-radius: 50px;
         height: 50px;
         font-size: 15px;
-        &:hover{
-         background: $buttoncolor2;
-         cursor: pointer;
+        &:hover {
+          background: $buttoncolor2;
+          cursor: pointer;
         }
       }
     }
@@ -176,3 +176,251 @@
     }
   }
 }
+/*------------------ HERO SECTION ENDS----------------*/
+/*------------------ LEVEL SECTION----------------*/
+.level {
+  padding: 50px;
+  @include mobile-3 {
+    padding: 50px 20px;
+  }
+  & &__wrap {
+    background: #f063b826;
+    border-radius: 50px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    @include mobile-3 {
+      padding: 30px 20px;
+    }
+    & .level__left {
+      width: 50%;
+      @include mobile-1 {
+        width: 100%;
+        & .level__img {
+          width: 100%;
+        }
+      }
+    }
+    & .level__right {
+      width: 48%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include mobile-1 {
+        text-align: center;
+        padding-top: 50px;
+        width: 100%;
+      }
+      & .level__header-text {
+        font-size: 40px;
+        font-family: $fontbold;
+        color: $fontcolor2;
+        padding-bottom: 40px;
+        @include mobile-3 {
+          font-size: 30px;
+        }
+      }
+      & .level__text {
+        font-family: $fontlight;
+        color: $fontcolor1;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
+
+/*------------------ LEVEL SECTION ENDS----------------*/
+/*------------------ FEATURES SECTION----------------*/
+.features {
+  padding: 50px;
+   @include mobile-2{
+          padding: 50px 20px;
+        }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    & .header__wrap {
+      width: 50%;
+      text-align: center;
+       @include mobile-2{
+          width: 90%;
+        }
+
+      & .header__wrap-hText {
+        color: $fontcolor2;
+        font-family: $fontbold;
+        font-size: 40px;
+        padding-bottom: 30px;
+      }
+      & .header__wrap-text {
+        color: $fontcolor1;
+        font-family: $fontlight;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0;
+    & .features__card {
+      width: 48%;
+      position: relative;
+      margin-bottom: 50px;
+      @include mobile-1 {
+        width: 100%;
+      }
+      & .background-img {
+        position: absolute;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        &_one {
+          justify-content: flex-end;
+          & img {
+            width: 250px;
+            height: 250px;
+          }
+        }
+        &_two {
+          justify-content: flex-end;
+          align-items: flex-end;
+          & img {
+            width: 200px;
+            height: 200px;
+          }
+        }
+        &_three {
+          justify-content: flex-end;
+          padding: 30px;
+          & img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+        &_four {
+          justify-content: center;
+          & img {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+      & .rectangle {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        & .rectangle__child {
+          height: 100%;
+          width: 70%;
+          border-radius: 0 0 50px 50px;
+          @include mobile-1 {
+            width: 100%;
+          }
+        }
+        & .rectangle_one {
+          background: url('../image/Rectangle\ 1.png');
+          background-size: cover;
+        }
+        & .rectangle_two {
+          background: url('../image/Rectangle\ 2.png');
+          background-size: cover;
+        }
+        & .rectangle_three {
+          background: url('../image/Rectangle\ 3.png');
+          background-size: cover;
+        }
+        & .rectangle_four {
+          background: url('../image/Rectangle\ 4.png');
+          background-size: cover;
+        }
+      }
+      & .card__wrap {
+        display: flex;
+        position: relative;
+        align-items: center;
+        padding: 50px 0;
+        height: 100%;
+        @include mobile-1 {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        & .card__left {
+          @include mobile-1 {
+            padding-bottom: 20px;
+          }
+        }
+        & .card__right {
+          padding-left: 30px;
+          @include mobile-1 {
+            text-align: center;
+          }
+          &-hText {
+            color: $fontcolor2;
+            font-family: $fontbold;
+            font-weight: 500;
+            font-size: 25px;
+            padding-bottom: 20px;
+          }
+          &-text {
+            color: $fontcolor1;
+            font-family: $fontlight;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            line-height: 25.6px;
+            padding-bottom: 20px;
+          }
+          &-button {
+            padding: 15px 20px;
+            font-family: $fontlight;
+            font-weight: bold;
+            border: none;
+            background: none;
+            border-radius: 50px;
+            color: $fontcolor2;
+            font-size: 16px;
+            & .navbar__button-img {
+              width: 30px;
+              padding-left: 10px;
+              transition: height 1s ease-in-out;
+            }
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*------------------ FEATURES SECTION ENDS----------------*/
+
+// .text{
+//  background: url('../image/Rectangle\ 39.png');
+//  background-size: cover;
+//  height: 400px;
+//  width: 400px;
+//  margin: 100px;
+//  position: relative;
+//  & .image{
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: flex-end;
+//   & img{
+//    width: 200px;
+//   }
+//  }
+// }
