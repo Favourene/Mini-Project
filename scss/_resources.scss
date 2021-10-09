@@ -1,0 +1,35 @@
+@font-face {
+ font-family: 'Avenir';
+ src: url('../font/Avenir.otf');
+}
+$fontbold: Helvetica;
+$fontlight: 'Avenir';
+$fontcolor1: #4b5d68;
+$fontcolor2: #212353;
+$buttoncolor1: #9c69e2;
+$buttoncolor2: #f063b8;
+$mobile-1: 1024px;
+$mobile-2: 800px;
+$mobile-3: 600px;
+$mobile-4: 500px;
+
+@mixin mobile-1 {
+  @media (max-width: $mobile-1) {
+    @content;
+  }
+}
+@mixin mobile-2 {
+  @media (max-width: $mobile-2) {
+    @content;
+  }
+}
+@mixin mobile-3 {
+  @media (max-width: $mobile-3) {
+    @content;
+  }
+}
+@mixin mobile-4 {
+  @media (max-width: $mobile-4) {
+    @content;
+  }
+}

@@ -1,0 +1,178 @@
+@import './resources';
+@import './_default.scss';
+
+/*------------------ NAVIGATION BAR----------------*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 0;
+  min-height: 10vh;
+  transition: height 1s ease-in-out;
+  overflow: hidden;
+  @include mobile-1 {
+    background: white;
+    flex-direction: column;
+    align-items: unset;
+    padding-top: 20px;
+    justify-content: unset;
+  }
+  @include mobile-3 {
+    padding: 10px 20px;
+  }
+  & &__wrap {
+    display: flex;
+    @include mobile-1 {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    & .navbar__list {
+      display: flex;
+      padding-top: 2%;
+      padding-left: 10%;
+      @include mobile-1 {
+        padding-left: 0;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+      }
+      & .navbar__item {
+        list-style: none;
+        padding: 0 30px;
+        @include mobile-1 {
+          padding: 30px 0;
+          flex-direction: column;
+        }
+        & .navbar__link {
+          text-decoration: none;
+          color: $fontcolor1;
+          font-size: 16px;
+          font-family: $fontlight;
+          &_active {
+            color: $fontcolor2;
+            font-weight: bold;
+          }
+          &:hover {
+            font-weight: bold;
+            color: $fontcolor2;
+          }
+        }
+      }
+    }
+  }
+  & &__button-div {
+    display: flex;
+    @include mobile-1 {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    & .navbar__button {
+      padding: 15px 20px;
+      font-family: $fontlight;
+      font-weight: bold;
+      background: #fff;
+      border: none;
+      box-shadow: 0px 5px 5px 0px #4b5d681a;
+      border-radius: 50px;
+      color: $fontcolor2;
+      font-size: 16px;
+      & .navbar__button-img {
+        width: 30px;
+        padding-left: 10px;
+      }
+    }
+  }
+  & &__toggle {
+    display: block;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+    width: 90%;
+    font-size: 40px;
+    display: none;
+    @include mobile-1 {
+      display: block;
+    }
+  }
+}
+.collapse {
+  height: 80vh;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+/*------------------ NAVIGATION BAR ends----------------*/
+/*------------------ HERO SECTION----------------*/
+.hero {
+  padding: 50px;
+  @include mobile-3 {
+    padding: 50px 20px;
+  }
+  & &__header-text {
+    color: $fontcolor2;
+    font-size: 50px;
+    width: 60%;
+    font-family: $fontbold;
+    @include mobile-1 {
+      width: 100%;
+      font-size: 40px;
+      text-align: center;
+    }
+    @include mobile-3{
+      font-size: 30px;
+    }
+  }
+  & &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .hero__left {
+      width: 30%;
+      @include mobile-1 {
+        width: 100%;
+        text-align: center;
+      }
+      & .hero__text {
+        padding-top: 50px;
+        font-family: $fontlight;
+        color: $fontcolor1;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+        padding-bottom: 30px;
+      }
+      & .hero__button {
+        padding: 0px 50px;
+        font-family: $fontlight;
+        color: #fff;
+        background: $buttoncolor1;
+        border: none;
+        border-radius: 50px;
+        height: 50px;
+        font-size: 15px;
+        &:hover{
+         background: $buttoncolor2;
+         cursor: pointer;
+        }
+      }
+    }
+    & .hero__right {
+      width: 70%;
+      margin-top: -7%;
+      @include mobile-1 {
+        width: 100%;
+        margin-top: 0;
+        padding-top: 50px;
+      }
+      & .hero__img {
+        width: 100%;
+      }
+    }
+  }
+}
