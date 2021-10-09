@@ -45,9 +45,6 @@ body {
         -ms-flex-align: unset;
             align-items: unset;
     padding-top: 20px;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
   }
 }
 
