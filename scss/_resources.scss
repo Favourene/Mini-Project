@@ -12,6 +12,7 @@ $mobile-1: 1024px;
 $mobile-2: 800px;
 $mobile-3: 600px;
 $mobile-4: 500px;
+$screen : 1300px;
 
 @mixin mobile-1 {
   @media (max-width: $mobile-1) {
@@ -30,6 +31,11 @@ $mobile-4: 500px;
 }
 @mixin mobile-4 {
   @media (max-width: $mobile-4) {
+    @content;
+  }
+}
+@mixin screenSize {
+  @media (min-height: $screen) {
     @content;
   }
 }

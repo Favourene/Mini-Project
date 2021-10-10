@@ -21,6 +21,9 @@
   @include mobile-3 {
     padding: 10px 20px;
   }
+  @include screenSize{
+    min-height: 6vh;
+  }
   & &__wrap {
     display: flex;
     @include mobile-1 {
