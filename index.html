@@ -12,6 +12,11 @@
       integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
       crossorigin="anonymous"
     />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>ClickUp Mini Project</title>
   </head>
@@ -198,12 +203,62 @@
         </div>
       </div>
     </section>
-    <!-- <div class="text">
-     <div class="image">
-      <img src="./image/Vector 56.png" alt="">
-     </div>
-     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, nostrum eligendi culpa, ex nobis assumenda quis labore, cupiditate eius eum molestias quod suscipit quaerat ut vero dolor sint obcaecati! Incidunt?</p>
-    </div> -->
+    <section class="testmonial swiper mySwiper">
+      <h1 class="testmonial__text">Testimonials</h1>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="swiper__left">
+            <img src="./image/person1.png" alt="" />
+          </div>
+          <div class="swiper__right">
+            <h2 class="swiper__right-text">John Fang</h2>
+            <p class="swiper__right-job">wordfaang.com</p>
+            <p class="swiper__right-content">
+              Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra
+              enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam
+              laoreet nulla.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="swiper__left">
+            <img src="./image/person2.png" alt="" />
+          </div>
+          <div class="swiper__right">
+            <h2 class="swiper__right-text">Jenny Doe</h2>
+            <p class="swiper__right-job">UX Engineer</p>
+            <p class="swiper__right-content">
+              Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra
+              enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam
+              laoreet nulla.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper__left">
+            <img src="./image/person1.png" alt="" />
+          </div>
+          <div class="swiper__right">
+            <h2 class="swiper__right-text">John Fang</h2>
+            <p class="swiper__right-job">wordfaang.com</p>
+            <p class="swiper__right-content">
+              Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra
+              enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam
+              laoreet nulla.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next">
+        <img src="./image/right-arrow.png" alt="" />
+      </div>
+      <div class="swiper-button-prev">
+        <img src="./image/right-arrow (1).png" alt="" />
+      </div>
+    </section>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

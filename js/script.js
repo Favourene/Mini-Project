@@ -16,3 +16,17 @@ times.onclick = function () {
   times.classList.remove('show')
   bars.classList.remove('hide')
 }
+
+  //  <!-- Initialize Swiper -->
+var swiper = new Swiper('.mySwiper', {
+  pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  spaceBetween: 20,
+  centeredSlides: true,
+})

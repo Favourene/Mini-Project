@@ -237,9 +237,9 @@
 /*------------------ FEATURES SECTION----------------*/
 .features {
   padding: 50px;
-   @include mobile-2{
-          padding: 50px 20px;
-        }
+  @include mobile-2 {
+    padding: 50px 20px;
+  }
 
   &__header {
     display: flex;
@@ -247,9 +247,9 @@
     & .header__wrap {
       width: 50%;
       text-align: center;
-       @include mobile-2{
-          width: 90%;
-        }
+      @include mobile-1 {
+        width: 90%;
+      }
 
       & .header__wrap-hText {
         color: $fontcolor2;
@@ -330,18 +330,38 @@
         & .rectangle_one {
           background: url('../image/Rectangle\ 1.png');
           background-size: cover;
+          @include mobile-1{
+            background: #68C9BA;
+            opacity: 0.1;
+            border-radius: 20px;
+          }
         }
         & .rectangle_two {
           background: url('../image/Rectangle\ 2.png');
           background-size: cover;
+          @include mobile-1{
+            background: #9C69E2;
+            opacity: 0.1;
+            border-radius: 20px;
+          }
         }
         & .rectangle_three {
           background: url('../image/Rectangle\ 3.png');
           background-size: cover;
+          @include mobile-1{
+            background: #F063B8;
+            opacity: 0.1;
+            border-radius: 20px;
+          }
         }
         & .rectangle_four {
           background: url('../image/Rectangle\ 4.png');
           background-size: cover;
+          @include mobile-1{
+            background: #2D9CDB;
+            opacity: 0.1;
+            border-radius: 20px;
+          }
         }
       }
       & .card__wrap {
@@ -353,6 +373,7 @@
         @include mobile-1 {
           flex-wrap: wrap;
           justify-content: center;
+          padding: 50px 20px;
         }
         & .card__left {
           @include mobile-1 {
@@ -404,23 +425,115 @@
 }
 
 /*------------------ FEATURES SECTION ENDS----------------*/
-
-// .text{
-//  background: url('../image/Rectangle\ 39.png');
-//  background-size: cover;
-//  height: 400px;
-//  width: 400px;
-//  margin: 100px;
-//  position: relative;
-//  & .image{
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-//   display: flex;
-//   justify-content: flex-end;
-//   align-items: flex-end;
-//   & img{
-//    width: 200px;
-//   }
-//  }
-// }
+/*------------------ TESTIMONIALS SECTION ENDS----------------*/
+.testmonial {
+  width: 100%;
+  height: 90vh;
+  background: #9c69e2;
+  padding: 50px;
+  padding-right: 30%;
+  overflow: hidden;
+  @include mobile-1{
+    padding: 50px 20px;
+    text-align: center;
+  }
+  & &__text{
+    color: #fff !important;
+    font-size: 40px;
+    font-family: $fontbold;
+    padding-bottom: 80px;
+  }
+  & .swiper-wrapper {
+    background: #9c69e2;
+    height: 65%;
+  }
+  & .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 60px 70px 50px 70px;
+    display: flex;
+    align-items: center;
+    font-family: $fontlight;
+    @include mobile-3{
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+    & .swiper__left{
+      width: 20%;
+      @include mobile-3{
+     width: 100%;
+    }
+    }
+   & .swiper__right{
+      width: 60%;
+      text-align: left;
+      @include mobile-2{
+        width: 80%;
+      }
+      @include mobile-3{
+     width: 100%;
+     text-align: center;
+    }
+      & .swiper__right-text{
+        color: $fontcolor2;
+        font-size: 18px;
+        padding-bottom: 5px;
+        
+      }
+      & .swiper__right-job{
+        color: $buttoncolor1;
+        font-size: 14px;
+        padding-bottom: 20px;
+        @include mobile-3{
+          padding-bottom: 10px;
+        }
+      }
+       & .swiper__right-content{
+         font-size: 18px;
+         line-height: 180%;
+         color: $fontcolor1;
+         @include mobile-3{
+           font-size: 14px;
+         }
+       }
+    }
+  }
+  & .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    opacity: 1;
+  }
+  & .swiper-pagination-bullet-active {
+    background: #f063b8;
+  }
+  & .swiper-horizontal
+    > & .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+  & .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    left: 5%;
+    top: 95%;
+  }
+  & .swiper-button-next:after,
+  & .swiper-rtl .swiper-button-prev:after {
+    content: unset;
+  }
+  & .swiper-button-prev,
+  & .swiper-rtl .swiper-button-next {
+    left: 87%;
+  }
+  & .swiper-button-prev:after,
+  & .swiper-rtl .swiper-button-next:after {
+    content: unset;
+  }
+  & .swiper-button-next,
+  & .swiper-button-prev {
+    top: 95%;
+    right: 20%;
+  }
+  & .swiper-button-next img,
+  & .swiper-button-prev img {
+    width: 40px;
+  }
+}
